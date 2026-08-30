@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OmniShop | Mi cuenta</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="auth-page"><section class="auth-box">
+  <a class="profile-back" href="index.html" aria-label="Volver a la tienda">← Volver a la tienda</a>
+  <a class="logo" href="index.html">OmniShop<b>▮</b></a><h1>Mi cuenta</h1>
+  <form class="auth-form" onsubmit="event.preventDefault(); alert('La gestión real del perfil requiere backend. Este sitio estático solo muestra la interfaz.'); window.location.href='index.html';">
+    <label for="nombre">Nombre</label><input id="nombre" name="nombre" value="Cliente" required>
+    <label for="apellido">Apellido</label><input id="apellido" name="apellido" value="Demo" required>
+    <label for="email">Correo electrónico</label><input id="email" name="email" type="email" value="cliente@omnishop.test" required>
+    <label for="telefono">Teléfono</label><input id="telefono" name="telefono" value="">
+    <label for="password">Nueva contraseña <span class="muted-label">(opcional)</span></label><input id="password" name="password" type="password" minlength="6" autocomplete="new-password">
+    <button class="checkout" type="submit">Guardar cambios</button>
+  </form>
+  <p class="auth-switch"><a href="index.html">Volver a la tienda</a></p>
+</section></main>
+</body>
+</html>
