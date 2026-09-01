@@ -1,21 +1,27 @@
-# 🛒 OmniShop - Mini E-commerce (Marketplace)
+# 🛒 OmniShop - Frontend E-commerce (Netlify)
 
-Bienvenido a **OmniShop**, un proyecto web tipo marketplace (inspirado en plataformas como MercadoLibre y Amazon), desarrollado como parte de mi formación en el programa de Tecnología en Desarrollo de Software.
+Repositorio oficial de la interfaz visual y la versión frontend estática de **OmniShop**, configurada para despliegue continuo en **Netlify**.
 
 ## 🚀 Descripción del Proyecto
-OmniShop es una interfaz web frontend interactiva diseñada para simular una tienda en línea moderna. Permite a los usuarios explorar un catálogo variado de productos, visualizar detalles, filtrar artículos y gestionar un carrito de compras dinámico.
+Este proyecto contiene la maquetación completa y el diseño de la experiencia de usuario (UI/UX) de un marketplace moderno. Incluye vistas interactivas para el catálogo de productos, gestión de carrito, paneles de administración de usuarios e inventario, y vistas de perfil de cliente.
 
-## 🛠️ Tecnologías Utilizadas
-* **HTML5:** Estructura semántica de las páginas (inicio, catálogo, carrito, etc.).
-* **CSS3:** Diseño responsivo, estilos modernos, uso de Flexbox/Grid y una paleta de colores optimizada para e-commerce.
-* **JavaScript (ES6+):** Interactividad del carrito de compras, simulación de búsqueda y dinamismo en la interfaz de usuario.
+## ⚙️ Configuración y Despliegue
+* Cuenta con un archivo `netlify.toml` y `_redirects` optimizados para el enrutamiento correcto de las vistas estáticas en Netlify.
+* Diseñado con un enfoque responsivo y adaptativo para dispositivos móviles y de escritorio.
 
-## 📂 Estructura del Proyecto
+## 📂 Estructura de Archivos
 ```text
-omnishop/
-│
-├── index.html       # Página principal (Inicio / Banner de ofertas)
-├── productos.html   # Catálogo general de productos
-├── carrito.html     # Vista del carrito de compras y resumen
-├── style.css        # Estilos generales y diseño visual
-└── script.js        # Lógica de la interfaz y carrito
+├── img/                     # Recursos gráficos y multimedia
+├── _redirects               # Reglas de redirección para Netlify
+├── netlify.toml             # Configuración de despliegue en Netlify
+├── index.html               # Página principal / Inicio
+├── productos.html           # Catálogo general de productos
+├── carrito.html             # Vista de carrito de compras y resumen
+├── login.html               # Vista de inicio de sesión
+├── registro.html            # Vista de registro de nuevos usuarios
+├── perfil.html              # Vista de perfil de usuario
+├── mis_pedidos.html         # Historial de compras del cliente
+├── inventario.html          # Panel visual de gestión de stock
+├── admin_usuarios.html      # Panel visual de administración de usuarios
+├── style.css                # Estilos globales y diseño visual del e-commerce
+└── script.js                # Lógica de interacción frontend y eventos de UI
