@@ -1,6 +1,11 @@
+## 👥 Autores y Colaboradores
+* **Santiago José Penso Peña** - Arquitectura Backend, Flask y Despliegue en Netlify
+* **Cristian Diaz** - Gestión de Base de Datos y Configuración de Conexiones
+* **Cristian Cantillo** - Pruebas, Control de Git y Documentación de Rutas
+
 # 🛒 OmniShop - Frontend E-commerce (Netlify)
 
-Repositorio oficial de la interfaz visual y la versión frontend estática de **OmniShop**, configurada para despliegue continuo en **Netlify**.
+Repositorio oficial de la interfaz visual y la versión frontend estática de **OmniShop**, configurada para despliegue continuo en **Netlify**..
 
 ## 🚀 Descripción del Proyecto
 Este proyecto contiene la maquetación completa y el diseño de la experiencia de usuario (UI/UX) de un marketplace moderno. Incluye vistas interactivas para el catálogo de productos, gestión de carrito, paneles de administración de usuarios e inventario, y vistas de perfil de cliente.
