@@ -30,3 +30,34 @@ Este proyecto contiene la maquetación completa y el diseño de la experiencia d
 ├── admin_usuarios.html      # Panel visual de administración de usuarios
 ├── style.css                # Estilos globales y diseño visual del e-commerce
 └── script.js                # Lógica de interacción frontend y eventos de UI
+
+## ☁️ Arquitectura Objetivo (Unidad 2 - Cloud Computing)
+
+Como parte de la Unidad 2, este proyecto migrará de su infraestructura actual (Netlify como PaaS) hacia una arquitectura propia gestionada en AWS (IaaS).
+
+### Mapeo de arquitectura actual → AWS
+
+| Componente | Actual | Destino en AWS |
+|---|---|---|
+| Frontend estático (este repo) | Netlify | S3 (alojamiento de sitio estático) |
+| Backend (Flask, repo aparte) | Render | EC2 |
+| Base de datos (PostgreSQL, repo aparte) | Supabase | RDS |
+| Usuarios y permisos del equipo | N/A | IAM |
+
+> **Nota:** El backend y la base de datos viven en el repositorio de OmniShop (Flask + Supabase). Este repositorio corresponde únicamente a la capa de frontend, hoy servida como PaaS en Netlify.
+
+### Región elegida: us-east-1 (Norte de Virginia)
+
+Se midió la latencia desde Barranquilla hacia tres regiones usando cloudping.info:
+
+| Región | Latencia |
+|---|---|
+| us-east-1 (Virginia) | 73 ms |
+| eu-west-1 (Irlanda) | 156 ms |
+| sa-east-1 (São Paulo) | 161 ms |
+
+**us-east-1** presentó la menor latencia, a pesar de no ser la más cercana geográficamente a Colombia. Además es una de las regiones más económicas de AWS y cuenta con mayor disponibilidad de servicios. Por estas razones, y porque es la región acordada por el curso para que los recursos de todo el equipo puedan conectarse entre sí, se elige **us-east-1** como región de trabajo para la Unidad 2.
+
+### 💰 Costo mensual estimado
+
+*(Pendiente: completar con la calculadora de AWS - calculator.aws)*
