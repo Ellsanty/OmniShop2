@@ -5,7 +5,7 @@
 
 # 🛒 OmniShop - Frontend E-commerce (Netlify)
 
-Repositorio oficial de la interfaz visual y la versión frontend estática de **OmniShop**, configurada para despliegue continuo en **Netlify**..
+Repositorio oficial de la interfaz visual y la versión frontend estática de **OmniShop**, configurada para despliegue continuo en **Netlify**.
 
 ## 🚀 Descripción del Proyecto
 Este proyecto contiene la maquetación completa y el diseño de la experiencia de usuario (UI/UX) de un marketplace moderno. Incluye vistas interactivas para el catálogo de productos, gestión de carrito, paneles de administración de usuarios e inventario, y vistas de perfil de cliente.
@@ -30,6 +30,7 @@ Este proyecto contiene la maquetación completa y el diseño de la experiencia d
 ├── admin_usuarios.html      # Panel visual de administración de usuarios
 ├── style.css                # Estilos globales y diseño visual del e-commerce
 └── script.js                # Lógica de interacción frontend y eventos de UI
+```
 
 ## ☁️ Arquitectura Objetivo (Unidad 2 - Cloud Computing)
 
