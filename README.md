@@ -64,6 +64,7 @@ Se midió la latencia desde Barranquilla hacia tres regiones usando cloudping.in
 Arquitectura mínima simulada: servidor EC2 t3.micro (backend Flask), 20 GB de disco EBS, base de datos RDS db.t3.micro con 20 GB de almacenamiento (PostgreSQL), bucket S3 para el frontend estático (~1 GB), y 5 GB de salida de datos al mes. Servidor encendido 24/7 (`us-east-1`).
 
 | Componente | Costo/mes |
+|---|---|
 | EC2 t3.micro | $7.59 |
 | EBS 20GB | $2.00 |
 | RDS db.t3.micro (compute) | $21.90 |
