@@ -72,3 +72,5 @@ Arquitectura mínima simulada: servidor EC2 t3.micro (backend Flask), 20 GB de d
 | S3 (frontend) | $0.02 | $61 |
 | Salida de datos (5GB) | $0.45 | $1.383 |
 | **Total estimado** | **≈ $34.26 USD** | **≈ $105.256 COP/mes** |
+
+> La diferencia de costos entre mantener el servidor encendido 24/7 frente a escenarios de uso parcial demuestra que la optimización temporal es clave para presupuestos ajustados en la nube. Para el proyecto OmniShop, implementar políticas de apagado automático o serverless en ambientes de desarrollo reducirá drásticamente el gasto operativo mensual sin comprometer la arquitectura objetivo en us-east-1.
