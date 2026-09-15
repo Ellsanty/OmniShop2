@@ -77,6 +77,8 @@ Arquitectura mínima simulada: servidor EC2 t3.micro (backend Flask), 20 GB de d
 
 ### Escenario B — Servidor encendido solo 4 horas diarias (~120 horas al mes)
 
+En este escenario, la instancia EC2 reduce su tiempo de actividad a 4 horas al día (ajustando proporcionalmente su costo de cómputo), mientras que el almacenamiento EBS, la base de datos RDS y S3 se mantienen operativos.
+
 | Componente | Costo/mes (USD) | Costo/mes (COP) |
 |---|---|---|
 | EC2 t3.micro (4 horas/día) | $1.01 | $3.100 |
