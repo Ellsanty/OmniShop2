@@ -63,13 +63,12 @@ Se midió la latencia desde Barranquilla hacia tres regiones usando cloudping.in
 
 Arquitectura mínima simulada: servidor EC2 t3.micro (backend Flask), 20 GB de disco EBS, base de datos RDS db.t3.micro con 20 GB de almacenamiento (PostgreSQL), bucket S3 para el frontend estático (~1 GB), y 5 GB de salida de datos al mes. Servidor encendido 24/7 (`us-east-1`).
 
-| Componente | Costo/mes |
-| EC2 t3.micro | $7.59 |
-| EBS 20GB | $2.00 |
-| RDS db.t3.micro (compute) | $21.90 |
-| RDS storage 20GB | $2.30 |
-| S3 (frontend) | $0.02 |
-| Salida de datos (5GB) | $0.45 |
-| **Total estimado** | **≈ $34.26 USD/mes** |
-
-> Nota: para cuentas AWS creadas después de julio de 2025 ya no aplica el free tier clásico de 12 meses. La cuenta institucional del curso puede contar con créditos iniciales que cubran este costo durante el semestre.
+| Componente | Costo/mes (USD) | Costo/mes (COP) |
+|---|---|---|
+| EC2 t3.micro | $7.59 | $23.319 |
+| EBS 20GB | $2.00 | $6.145 |
+| RDS db.t3.micro (compute) | $21.90 | $67.283 |
+| RDS storage 20GB | $2.30 | $7.066 |
+| S3 (frontend) | $0.02 | $61 |
+| Salida de datos (5GB) | $0.45 | $1.383 |
+| **Total estimado** | **≈ $34.26 USD** | **≈ $105.256 COP/mes** |
