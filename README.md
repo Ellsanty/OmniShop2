@@ -77,14 +77,15 @@ Arquitectura mínima simulada: servidor EC2 t3.micro (backend Flask), 20 GB de d
 
 ### Escenario B — Servidor encendido solo 4 horas diarias (~120 horas al mes)
 
-Componente,Costo/mes (USD),Costo/mes (COP)
-EC2 t3.micro (4 horas/día),$1.01,$3.100
-EBS 20GB,$2.00,$6.145
-RDS db.t3.micro (compute),$21.90,$67.283
-RDS storage 20GB,$2.30,$7.066
-S3 (frontend),$0.02,$61
-Salida de datos (5GB),$0.45,$1.383
-Total estimado,≈$27.68 USD,≈$85.038 COP/mes
+| Componente | Costo/mes (USD) | Costo/mes (COP) |
+|---|---|---|
+| EC2 t3.micro (4 horas/día) | $1.01 | $3.100 |
+| EBS 20GB | $2.00 | $6.145 |
+| RDS db.t3.micro (compute) | $21.90 | $67.283 |
+| RDS storage 20GB | $2.30 | $7.066 |
+| S3 (frontend) | $0.02 | $61 |
+| Salida de datos (5GB) | $0.45 | $1.383 |
+| **Total estimado** | **≈ $27.68 USD** | **≈ $85.038 COP/mes** |
 
 ### Conclusión personal
 > La diferencia de costos entre mantener el servidor encendido 24/7 frente a escenarios de uso parcial demuestra que la optimización temporal es clave para presupuestos ajustados en la nube. Para el proyecto OmniShop, implementar políticas de apagado automático o serverless en ambientes de desarrollo reducirá drásticamente el gasto operativo mensual sin comprometer la arquitectura objetivo en us-east-1.
