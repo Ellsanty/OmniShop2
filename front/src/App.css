@@ -1,0 +1,31 @@
+:root {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #e8ecf8;
+  background: #060913;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(900px 480px at 85% -10%, rgb(124 108 240 / 16%), transparent 60%),
+    radial-gradient(800px 420px at -10% 10%, rgb(34 211 238 / 13%), transparent 60%),
+    #060913;
+}
+
+button {
+  font: inherit;
+}
+
+.contenedor {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0;
+}
