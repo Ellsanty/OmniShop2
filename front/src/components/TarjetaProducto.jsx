@@ -35,9 +35,9 @@ function TarjetaProducto({ producto, textoBoton, alHacerClick, cantidad }) {
           <div className="before">${visual.precioAnterior.toLocaleString("en-US")}</div>
         )}
       </div>
-      {producto.stock <= 0 ? (
+      {producto.agotado ? (
         <span className="stock out">Sin stock</span>
-      ) : producto.stock <= 8 ? (
+      ) : producto.stockBajo ? (
         <span className="stock low">Últimas unidades</span>
       ) : (
         <span className="stock">En stock</span>
