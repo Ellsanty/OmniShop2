@@ -1,17 +1,13 @@
-import datosVisuales from "../datosVisuales.js";
-
 function TarjetaProducto({ producto, textoBoton, alHacerClick, cantidad }) {
-  const visual = datosVisuales[producto.id];
-
   return (
     <article className="card">
       <div className="art">
-        {visual?.destacado && <span className="badge dest">DESTACADO</span>}
-        {visual?.precioAnterior && <span className="badge off">OFERTA</span>}
-        {visual?.imagen && (
+        {producto.destacado && <span className="badge dest">DESTACADO</span>}
+        {producto.precioAnterior && <span className="badge off">OFERTA</span>}
+        {producto.imagen && (
           <img
             className="product-image"
-            src={`/img/${visual.imagen}`}
+            src={`/img/${producto.imagen}`}
             alt={producto.nombre}
             loading="lazy"
           />
@@ -19,20 +15,20 @@ function TarjetaProducto({ producto, textoBoton, alHacerClick, cantidad }) {
       </div>
       <div className="brand">{producto.marca}</div>
       <h3>{producto.nombre}</h3>
-      {visual?.calificacion && (
+      {producto.calificacion && (
         <div className="rate">
-          ★ {visual.calificacion} <span>({producto.stock} disponibles)</span>
+          ★ {producto.calificacion} <span>({producto.stock} disponibles)</span>
         </div>
       )}
-      {visual?.especificaciones && (
-        <div className="specs-mini">{visual.especificaciones.join(" · ")}</div>
+      {producto.especificaciones && (
+        <div className="specs-mini">{producto.especificaciones.join(" · ")}</div>
       )}
       <div className="prow">
         <div className="price">
           <b>${producto.precio.toLocaleString("en-US")}</b>
         </div>
-        {visual?.precioAnterior && (
-          <div className="before">${visual.precioAnterior.toLocaleString("en-US")}</div>
+        {producto.precioAnterior && (
+          <div className="before">${producto.precioAnterior.toLocaleString("en-US")}</div>
         )}
       </div>
       {producto.agotado ? (
