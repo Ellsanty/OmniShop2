@@ -1,6 +1,7 @@
 const {
   aplicarDescuento,
   calcularTotalCarrito,
+  estaAgotado,
   hayStock,
   tieneStockBajo,
   validarPedido,
@@ -67,6 +68,18 @@ describe('tieneStockBajo', () => {
 
   it('no marca como bajo un stock superior al mínimo', () => {
     expect(tieneStockBajo({ stock: 6 })).toBe(false);
+  });
+});
+
+describe('estaAgotado', () => {
+  it('marca como agotado un producto con stock cero', () => {
+    // Caso límite: cero unidades disponibles significa que el producto está agotado.
+    expect(estaAgotado({ stock: 0 })).toBe(true);
+  });
+
+  it('no marca como agotado un producto con una unidad', () => {
+    // Caso límite: una unidad sigue disponible.
+    expect(estaAgotado({ stock: 1 })).toBe(false);
   });
 });
 

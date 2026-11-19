@@ -29,6 +29,10 @@ function tieneStockBajo(producto) {
   return Boolean(producto && producto.stock <= STOCK_MINIMO);
 }
 
+function estaAgotado(producto) {
+  return Boolean(producto && producto.stock <= 0);
+}
+
 function valorInventario(productos) {
   return productos.reduce((total, producto) => total + producto.precio * producto.stock, 0);
 }
@@ -68,6 +72,7 @@ module.exports = {
   aplicarDescuento,
   hayStock,
   tieneStockBajo,
+  estaAgotado,
   valorInventario,
   validarPedido
 };

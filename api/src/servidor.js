@@ -5,13 +5,10 @@ const { responderError } = require('./utils/responder');
 
 const aplicacion = express();
 const puerto = process.env.PORT || 3000;
+const origenPermitido = process.env.ORIGEN_FRONT || 'http://localhost:5173';
 
-if (process.env.ORIGEN_FRONT) {
-  aplicacion.use(cors({ origin: process.env.ORIGEN_FRONT }));
-} else {
-  // En la entrega, se debe restringir CORS configurando ORIGEN_FRONT.
-  aplicacion.use(cors());
-}
+// Limita CORS: en desarrollo solo Vite local y en producción solo la URL del bucket S3.
+aplicacion.use(cors({ origin: origenPermitido }));
 
 aplicacion.use(express.json());
 
