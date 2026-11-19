@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { crearPedido, obtenerProductos } from "./api.js";
 import TarjetaProducto from "./components/TarjetaProducto.jsx";
-import datosVisuales from "./datosVisuales.js";
 
 const secciones = [
   { id: "catalogo", nombre: "Catálogo" },
@@ -48,16 +47,12 @@ function App() {
         return productoB.precio - productoA.precio;
       }
       if (orden === "rating") {
-        return (
-          (datosVisuales[productoB.id]?.calificacion || 0) -
-          (datosVisuales[productoA.id]?.calificacion || 0)
-        );
+        return productoB.calificacion - productoA.calificacion;
       }
       return (
-        Number(Boolean(datosVisuales[productoB.id]?.destacado)) -
-          Number(Boolean(datosVisuales[productoA.id]?.destacado)) ||
-        (datosVisuales[productoB.id]?.calificacion || 0) -
-          (datosVisuales[productoA.id]?.calificacion || 0)
+        Number(Boolean(productoB.destacado)) -
+          Number(Boolean(productoA.destacado)) ||
+        productoB.calificacion - productoA.calificacion
       );
     });
   }, [busqueda, categoria, orden, productos]);

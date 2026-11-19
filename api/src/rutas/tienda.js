@@ -2,6 +2,7 @@ const express = require('express');
 const {
   aplicarDescuento,
   calcularTotalCarrito,
+  estaAgotado,
   hayStock,
   tieneStockBajo,
   validarPedido,
@@ -17,7 +18,13 @@ const { responder, responderError } = require('../utils/responder');
 const tienda = express.Router();
 
 tienda.get('/productos', (solicitud, respuesta) => {
-  return responder(respuesta, 200, listarProductos());
+  const productos = listarProductos().map((producto) => ({
+    ...producto,
+    agotado: estaAgotado(producto),
+    stockBajo: tieneStockBajo(producto)
+  }));
+
+  return responder(respuesta, 200, productos);
 });
 
 tienda.get('/productos/resumen', (solicitud, respuesta) => {
